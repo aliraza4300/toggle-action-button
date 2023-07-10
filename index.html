@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .toggle-container {
+      display: flex;
+      justify-content: space-between;
+      width: 300px;
+      box-shadow: 0px 1px 4px 0px #D9E1EE;
+      color: #000;
+      border-radius: 25px;
+    }
+
+    .toggle-label {
+      flex-grow: 1;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #fff;
+      border-radius: 25px;
+    }
+
+    .toggle-label.selected {
+      background-color: #EEF7F2;
+      color: #00744B;
+      border-color: #00744B;
+    }
+    
+    .toggle-label:first-of-type {
+        border-radius: 25px;
+    }
+
+    .toggle-label:last-of-type {
+     border-radius: 25px;
+      
+    }
+
+    .toggle-input {
+      display: none;
+    }
+  </style>
+  <script>
+    function handleToggleClick(inputId) {
+      const labels = document.getElementsByClassName('toggle-label');
+      for (let i = 0; i < labels.length; i++) {
+        labels[i].classList.remove('selected');
+      }
+      document.getElementById(inputId).checked = true;
+      document.querySelector(`label[for=${inputId}]`).classList.add('selected');
+    }
+  </script>
+</head>
+<body>
+    <svg data-v-fde0c5aa="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" class="iconLeft"><!----><defs data-v-fde0c5aa=""><linearGradient data-v-fde0c5aa="" gradientTransform="rotate(25)" id="3467688f-1020-46b5-9648-e0a4dc223d7c" x1="0%" y1="0%" x2="100%" y2="0%"><stop data-v-fde0c5aa="" offset="0%" stop-color="#E98E0D" stop-opacity="1"></stop><stop data-v-fde0c5aa="" offset="100%" stop-color="#1536F1" stop-opacity="1"></stop></linearGradient></defs><rect data-v-fde0c5aa="" fill="url(#3467688f-1020-46b5-9648-e0a4dc223d7c)" x="0" y="0" width="300px" height="300px" class="logo-background-square"></rect><defs data-v-fde0c5aa=""><!----></defs><g data-v-fde0c5aa="" id="6753feef-53c5-40a4-98fd-9efe6298bf04" fill="#ffffff" transform="matrix(3.3642124634720316,0,0,3.3642124634720316,102.45392417554777,131.16040992382486)"><path d="M0 0.70L2.79 0.70L2.79 0.70Q3.25 0.70 3.58 1.04L3.58 1.04L3.58 1.04Q3.91 1.37 3.91 1.83L3.91 1.83L3.91 9.39L3.91 9.39Q3.91 9.84 3.58 10.17L3.58 10.17L3.58 10.17Q3.25 10.50 2.79 10.50L2.79 10.50L0 10.50L0 4.62L0.98 4.62L0 1.68L0 0.70ZM2.93 9.39L2.93 1.83L2.93 1.83Q2.93 1.69 2.79 1.69L2.79 1.69L0.98 1.69L0.98 9.52L2.79 9.52L2.79 9.52Q2.93 9.52 2.93 9.39L2.93 9.39ZM8.34 1.68L5.80 1.68L5.80 4.62L7.84 4.62L7.84 5.60L5.80 5.60L5.80 9.52L8.34 9.52L8.34 10.50L4.82 10.50L4.82 4.62L5.80 4.62L4.82 1.68L4.82 0.70L8.34 0.70L8.34 1.68ZM12.74 0.70L13.73 0.70L12.17 10.50L10.82 10.50L9.25 0.70L10.25 0.70L11.49 8.54L12.74 0.70ZM18.30 0.70L18.30 1.68L16.93 1.68L16.93 10.50L15.95 10.50L15.95 1.68L14.57 1.68L14.57 0.70L18.30 0.70ZM22.74 1.68L20.19 1.68L20.19 4.62L22.23 4.62L22.23 5.60L20.19 5.60L20.19 9.52L22.74 9.52L22.74 10.50L19.21 10.50L19.21 4.62L20.19 4.62L19.21 1.68L19.21 0.70L22.74 0.70L22.74 1.68ZM26.57 8.34L27.55 8.34L27.55 9.39L27.55 9.39Q27.55 9.81 27.29 10.12L27.29 10.12L27.29 10.12Q27.03 10.43 26.63 10.50L26.63 10.50L24.58 10.50L24.58 10.50Q24.18 10.43 23.91 10.12L23.91 10.12L23.91 10.12Q23.65 9.81 23.65 9.39L23.65 9.39L23.65 1.81L23.65 1.81Q23.65 1.39 23.91 1.08L23.91 1.08L23.91 1.08Q24.18 0.77 24.58 0.70L24.58 0.70L26.63 0.70L26.63 0.70Q27.03 0.77 27.29 1.08L27.29 1.08L27.29 1.08Q27.55 1.39 27.55 1.81L27.55 1.81L27.55 2.86L26.57 2.86L26.57 1.81L26.57 1.81Q26.57 1.67 26.45 1.67L26.45 1.67L24.77 1.67L24.77 1.67Q24.63 1.67 24.63 1.81L24.63 1.81L24.63 9.39L24.63 9.39Q24.63 9.53 24.77 9.53L24.77 9.53L26.45 9.53L26.45 9.53Q26.57 9.53 26.57 9.39L26.57 9.39L26.57 8.34ZM31.39 0.70L32.37 0.70L32.37 10.50L31.39 10.50L31.39 5.60L29.44 5.60L29.44 10.50L28.46 10.50L28.46 4.62L29.44 4.62L28.46 1.68L28.46 0.70L29.44 0.70L29.44 4.62L31.39 4.62L31.39 0.70ZM36.20 0.70L37.18 0.70L37.18 10.50L36.20 10.50L36.20 5.60L34.26 5.60L34.26 10.50L33.28 10.50L33.28 4.62L34.26 4.62L33.28 1.68L33.28 0.70L34.26 0.70L34.26 4.62L36.20 4.62L36.20 0.70ZM41.01 0.71L41.99 0.71L41.99 9.39L41.99 9.39Q41.99 9.81 41.73 10.12L41.73 10.12L41.73 10.12Q41.47 10.43 41.06 10.50L41.06 10.50L39.03 10.50L39.03 10.50Q38.63 10.43 38.36 10.12L38.36 10.12L38.36 10.12Q38.09 9.81 38.09 9.39L38.09 9.39L38.09 0.71L39.07 0.71L39.07 9.39L39.07 9.39Q39.07 9.53 39.21 9.53L39.21 9.53L40.88 9.53L40.88 9.53Q41.01 9.53 41.01 9.39L41.01 9.39L41.01 0.71ZM46.80 4.76L46.80 4.76L46.80 4.76Q46.62 5.00 46.26 5.11L46.26 5.11L46.26 5.11Q46.63 5.24 46.80 5.49L46.80 5.49L46.80 5.49Q46.83 5.56 46.83 5.61L46.83 5.61L46.83 5.61Q46.83 5.67 46.83 5.74L46.83 5.74L46.83 9.38L46.83 9.38Q46.83 9.84 46.51 10.17L46.51 10.17L46.51 10.17Q46.19 10.50 45.72 10.50L45.72 10.50L42.90 10.50L42.90 4.62L43.88 4.62L42.90 1.68L42.90 0.70L45.72 0.70L45.72 0.70Q46.19 0.70 46.51 1.03L46.51 1.03L46.51 1.03Q46.83 1.36 46.83 1.82L46.83 1.82L46.83 4.48L46.83 4.48Q46.83 4.55 46.83 4.62L46.83 4.62L46.83 4.62Q46.83 4.69 46.80 4.76ZM45.85 9.38L45.85 5.74L45.85 5.74Q45.85 5.60 45.72 5.60L45.72 5.60L43.88 5.60L43.88 9.52L45.72 9.52L45.72 9.52Q45.85 9.52 45.85 9.38L45.85 9.38ZM45.85 4.48L45.85 1.82L45.85 1.82Q45.85 1.68 45.72 1.68L45.72 1.68L43.88 1.68L43.88 4.62L45.72 4.62L45.72 4.62Q45.85 4.62 45.85 4.48L45.85 4.48Z"></path></g><defs data-v-fde0c5aa=""><!----></defs><g data-v-fde0c5aa="" id="48dfe45c-f582-4879-8dc7-1a49eea3d40e" stroke="none" fill="#ffffff" transform="matrix(1.5454351304858678,0,0,1.5454351304858678,40,125.27303791222612)"><path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16zM14.817 6.421h2v8.886h8.887v2H14.817V6.421zm-5.959.437h2v14.283h14.283v2H8.858V6.858z"></path></g><!----></svg>
+  <div class="toggle-container">
+    <label for="toggle1" class="toggle-label selected" onclick="handleToggleClick('toggle1')">Option 1</label>
+    <label for="toggle2" class="toggle-label" onclick="handleToggleClick('toggle2')">Option 2</label>
+    <label for="toggle3" class="toggle-label" onclick="handleToggleClick('toggle3')">Option 3</label>
+    <input type="radio" name="toggle" id="toggle1" class="toggle-input" checked>
+    <input type="radio" name="toggle" id="toggle2" class="toggle-input">
+    <input type="radio" name="toggle" id="toggle3" class="toggle-input">
+  </div>
+</body>
+</html>
